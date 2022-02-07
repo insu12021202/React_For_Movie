@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/insu12021202/React_For_Movie.git/static/js/main.38a28223.js",
-    "index.html": "/insu12021202/React_For_Movie.git/index.html",
-    "main.38a28223.js.map": "/insu12021202/React_For_Movie.git/static/js/main.38a28223.js.map"
+    "main.js": "/React_For_Movie/static/js/main.38a28223.js",
+    "index.html": "/React_For_Movie/index.html",
+    "main.38a28223.js.map": "/React_For_Movie/static/js/main.38a28223.js.map"
   },
   "entrypoints": [
     "static/js/main.38a28223.js"
