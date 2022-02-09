@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import DetailForMovie from "../components/DetailForMovie";
+import DetailForMovie from "../components/DetailForMovie/";
 import PropTypes from "prop-types";
+import { Loader, Loader_text } from "../Home/style.js";
+import { DetailContainer } from "../components/DetailForMovie/style.js";
 
 function Detail() {
   const id = useParams().id;
@@ -19,9 +21,11 @@ function Detail() {
   }, []);
 
   return (
-    <div>
+    <DetailContainer>
       {loading ? (
-        <h1>loading...</h1>
+        <Loader>
+          <Loader_text>Loading...</Loader_text>
+        </Loader>
       ) : (
         <DetailForMovie
           title={detail.title}
@@ -31,7 +35,7 @@ function Detail() {
           genres={detail.genres}
         />
       )}
-    </div>
+    </DetailContainer>
   );
 }
 

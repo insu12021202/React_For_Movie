@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import Movie from "../components/Movie";
+import Movie from "../Home/index.js";
 import PropTypes from "prop-types";
+import { Container, Loader, Loader_text, Movies } from "../Home/style.js";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -16,11 +17,13 @@ function Home() {
   };
   useEffect(() => getMovies(), []);
   return (
-    <div>
+    <Container>
       {loading ? (
-        <h1>loading...</h1>
+        <Loader>
+          <Loader_text>Loading...</Loader_text>
+        </Loader>
       ) : (
-        <div>
+        <Movies>
           {movies.map((movie) => (
             <Movie
               id={movie.id}
@@ -29,11 +32,12 @@ function Home() {
               title={movie.title}
               summary={movie.summary}
               genres={movie.genres}
+              year={movie.year}
             />
           ))}
-        </div>
+        </Movies>
       )}
-    </div>
+    </Container>
   );
 }
 
